@@ -617,3 +617,62 @@ a:hover {
 #lilast {
 	padding:20px 0 0 0;
 }
+#popnn-cov {
+	display:none;
+	background:#333;
+	background:rgba(0,0,0,.75);
+	height:100%;
+	left:0;
+	top:0;
+	position: fixed;
+	width:100%;
+	z-index: 20;
+}
+
+#popnn-bd {
+	width:360px;
+	height:160px;
+	top:50%;
+	left:50%;
+	position: absolute;
+	margin-left:-180px;
+	margin-top: -80px;
+	background:#FFF;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 0 15px rgba(0,0,0,.5);
+}
+#popnn-bd .wp {
+	padding:20px;
+}
+#popnn-bd .cls {
+	height:32px;
+	width:32px;
+	background:#FA9918;
+	position: absolute;
+	right:0;
+	top:0;
+	border:none;
+	display:inline-block;
+	line-height: 32px;
+	padding:0;
+	margin:0;
+	color:#FFF;
+	font-size:32px;
+	font-family: arial;
+	cursor: pointer;
+	z-index:5;
+}
+#popnn-bd .t1 {
+	font-size:18px;
+	padding-top:20px;
+	margin-bottom:5px;
+}
+#popnn-bd .t2 {
+	padding:5px;
+	background:#fff;
+	color:#FA9918;
+	font-size:32px;
+	font-family: arial;
+	margin:0;
+}

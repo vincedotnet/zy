@@ -214,8 +214,9 @@
 							<div id="cnai"></div>
 							<ul id="cme2di">
 								<li><span class="col1">公司全称：</span>众赢国际物流深圳仓</li>
-								<li><span class="col1">联系人：</span>潘彤</li>
+								<li><span class="col1">联系人：</span>潘小姐</li>
 								<li><span class="col1">公司地址：</span>深圳市宝安区福永兴华路兴鸿基物流园二期A栋303室</li>
+								<li><span class="col1">QQ：</span>2924744605</li>
 								<li><span class="col1">电话：</span>0755-29982347</li> 
 								<li><span class="col1">邮箱：</span>2924744605@qq.com</li>
 								
@@ -231,7 +232,15 @@
 			</div>
 		</div>
 		
-		
+		<div id="popnn-cov">
+			<div id="popnn-bd">
+				<button class="cls">&times;</button>
+				<div class="wp tc">
+					<p class="t1">联系客服QQ，获取最新报价</p>
+					<p class="t2">QQ: 2924744605</p>
+				</div>
+			</div>
+		</div>
 		
 		<div id="bottomblock">
 			<div class="t1">深圳市宝安区福永兴华路兴鸿基物流园二期A栋303室</div>
@@ -300,6 +309,12 @@
 				}, 5000);
 				$('body').data('auto-scroll-gall', intid);
 				
+				$('#popnn-bd .cls').click(function(){
+					$('#popnn-cov').toggle();
+				});
+				$('#mied-diwn').click(function(){
+					$('#popnn-cov').show();
+				});
 			});
 		</script>
 	</body>
