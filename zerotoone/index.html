@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+
+		<!-- Bootstrap -->
+		<link href="css/global.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<!--
+        	作者：vincedotnet@hotmail.com
+        	时间：2015-06-22
+        	描述：网站头部（START）
+        -->
+		<div class="topblk">
+			<div class="tt">爱法律推荐需求</div>
+			<button id="topsharing">
+				<span class="ico"></span>
+			</button>
+		</div>
+		<!--
+        	作者：vincedotnet@hotmail.com
+        	时间：2015-06-22
+        	描述：网站头部（END）
+        -->
+
+		<!--
+        	作者：vincedotnet@hotmail.com
+        	时间：2015-06-22
+        	描述：内容部分（开始）
+        -->
+		<style>
+			.comokuitm {
+				padding: 0;
+				background: #FFF;
+				box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+				margin: 10px 10px;
+				border-radius: 5px;
+			}
+			.comokuitm .wp {
+				padding: 15px;
+			}
+			.comokuitm .tt {
+				background: #333;
+				color: #FFF;
+				padding: 5px;
+				border-radius: 3px;
+				text-align: center;
+				margin-bottom: 10px;
+			}
+			.comokuitm .ct .row-itm {
+				margin-bottom: 15px;
+				padding: 15px 45px 15px 15px;
+				border: 1px solid #CECECE;
+				border-radius: 3px;
+				margin-bottom: 5px;
+				position: relative;
+				line-height: 25px;
+			}
+			.comokuitm .ct .row-itm button {
+				height: 20px;
+				width: 20px;
+				background: url(img/m-unchecked.png) center center no-repeat;
+				background-size: contain;
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				margin-top: -10px;
+			}
+			.comokuitm .ct .row-itm button.selected {
+				background-image: url(img/m-checked.png);
+			}
+			.comokuitm .ct .row-itm:last-child {
+				margin-bottom: 0;
+			}
+			.tatab {
+				border-bottom: 1px solid #CECECE;
+				position: fixed;
+				top: 50px;
+				width: 100%;
+				z-index: 5;
+			}
+			.tatab .itm {
+				background: #F0F0F0;
+				padding: 15px 0;
+				float: left;
+				border-right: 1px solid #CECECE;
+				box-sizing: border-box;
+				width: 25%;
+				text-align: center;
+			}
+			.tatab .itm.selected {
+				background: #CECECE;
+				color: #FFF;
+			}
+			.tatab .itm:last-child {
+				border-right: 0;
+			}
+			.frmbtn {
+				padding: 0 10px;
+			}
+			.frmbtn button {
+				background: #FF5000;
+				margin: 0;
+				padding: 0;
+				border-radius: 5px;
+				font-size: 16px;
+				display: block;
+				width: 100%;
+				height: 42px;
+				line-height: 42px;
+			}
+			.unit-tip {
+				padding: 20px 10px 10px 10px;
+				color: #999;
+				text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+				line-height: 20px;
+				text-align: center;
+			}
+			.tab-ie {
+				display: none;
+			}
+			.tab-ie.selected {
+				display: block;
+			}
+			.bwitm {
+				margin: 15px 10px;
+			}
+			.bwitm.selected {} .bwitm .tt {
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				color: #FFF;
+				background: rgba(80, 80, 80, .9);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				text-align: center;
+			}
+			.bwitm .ckt,
+			.nuyt .bock {
+				display: block;
+				background: url(img/m-unchecked.png) center center no-repeat;
+				background-size: contain;
+				height: 24px;
+				width: 24px;
+				position: absolute;
+				right: 15px;
+				top: 15px;
+				border: 2px solid #FFF;
+				border-radius: 100px;
+			}
+			.nuyt .bock {
+				top: 0;
+			}
+			.bwitm.selected .ckt,
+			.nuyt .nitm.selected .bock {
+				background-image: url(img/m-checked.png);
+			}
+			.biie0tt {
+				padding: 20px 0 5px 0;
+				display: inline-block;
+				border-bottom: 5px solid #333;
+			}
+			.nuyt {
+				padding: 15px;
+			}
+			.nuyt .nitm {
+				float: left;
+				width: 50%;
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			.nuyt .nitm .ico {
+				width: 100%;
+				height: 50px;
+				background: url(img/android.png) center center no-repeat;
+				background-size: contain;
+				display: block;
+			}
+			.nuyt .nitm.web .ico {
+				background-image: url(img/internet_explorer.png);
+			}
+			.nuyt .nitm.ios .ico {
+				background-image: url(img/iOS.png);
+			}
+			.nuyt .nitm.h5 .ico {
+				background-image: url(img/safari.png);
+			}
+			.nuyt .nitm .txt {
+				text-align: center;
+				padding: 5px;
+			}
+		</style>
+		<div class="fixthetop"></div>
+		<div class="tatab">
+			<div class="itm selected" rel="tab01">
+				概要
+			</div>
+			<div class="itm" rel="tab02">
+				界面&amp;色调
+			</div>
+			<div class="itm" rel="tab03">
+				适用终端
+			</div>
+			<div class="itm" rel="tab04">
+				建议价格
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="tab01" class="tab-ie selected">
+			<p class="unit-tip">
+				以下为“爱法律”项目的推荐需求列表，也可以随时根据客户的实际要求进行增减。
+			</p>
+			<div class="comokuitm">
+				<div class="wp">
+					<p class="tt">通用</p>
+					<div class="ct">
+						<div class="row-itm radio-bx">
+							<div>注册</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>登录/登出</div>
+							<button class="selected"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="comokuitm">
+				<div class="wp">
+					<p class="tt">首页</p>
+					<div class="ct">
+						<div class="row-itm radio-bx">
+							<div>大幅幻灯片广告模块</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>在线互动/问答模块</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>优秀律师展示</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>推荐热帖</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>用户留言及展示</div>
+							<button class="selected"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="comokuitm">
+				<div class="wp">
+					<p class="tt">全站搜索</p>
+					<div class="ct">
+						<div class="row-itm radio-bx">
+							<div>搜索结果列表</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>分模块搜索</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>SEO优化</div>
+							<button class="selected"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="comokuitm">
+				<div class="wp">
+					<p class="tt">文章/百科</p>
+					<div class="ct">
+						<div class="row-itm radio-bx">
+							<div>模块首页：作为“文章/百科”的子模块首页，展示热门内容及快捷入口</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>文章的分类展示</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>针对文章的评论/回复</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>文章的收藏和喜欢</div>
+							<button class="selected"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="comokuitm">
+				<div class="wp">
+					<p class="tt">用户账户</p>
+					<div class="ct">
+						<div class="row-itm radio-bx">
+							<div>基本信息维护</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>各种历史（发言，回复，交易等）记录</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>各种收藏/喜欢记录</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>积分/余额</div>
+							<button class="selected"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="comokuitm">
+				<div class="wp">
+					<p class="tt">系统后台管理</p>
+					<div class="ct">
+						<div class="row-itm radio-bx">
+							<div>首页信息维护</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>用户资料管理</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>文章/百科管理</div>
+							<button class="selected"></button>
+						</div>
+						<div class="row-itm radio-bx">
+							<div>用户留言管理</div>
+							<button class="selected"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="frmbtn">
+				<button style="">更新</button>
+			</div>
+		</div>
+		<div id="tab02" class="tab-ie">
+			<p class="unit-tip">
+				请根据用户需求和喜好，选取产品的风格和色调
+			</p>
+
+			<p class="tc">
+				<span class="biie0tt">选择风格</span>
+			</p>
+			<div class="bwitm">
+				<img src="img/ui/s1.jpg" width="100%" />
+				<div class="tt">简约产品印象</div>
+				<div class="ckt"></div>
+			</div>
+			<div class="bwitm selected">
+				<img src="img/ui/s2.jpg" width="100%" />
+				<div class="tt">扁平化大色块</div>
+				<div class="ckt"></div>
+			</div>
+			<div class="bwitm">
+				<img src="img/ui/s3.jpg" width="100%" />
+				<div class="tt">彪悍设计</div>
+				<div class="ckt"></div>
+			</div>
+			<div class="bwitm">
+				<img src="img/ui/s4.jpg" width="100%" />
+				<div class="tt">温馨家庭</div>
+				<div class="ckt"></div>
+			</div>
+			<p class="tc">
+				<span class="biie0tt">选择主色调</span>
+			</p>
+			<div style="padding:10px;">
+				<select style="padding:0;height:30px;line-height:30px;text-align:center;background:#FFF;display:inline-block;width: 100%;">
+					<option>白色</option>
+					<option>灰色</option>
+					<option>红色</option>
+					<option>浅蓝</option>
+					<option>深蓝</option>
+					<option>橙色</option>
+					<option>绿色</option>
+				</select>
+			</div>
+
+			<div class="frmbtn">
+				<button style="">更新</button>
+			</div>
+		</div>
+		<div id="tab03" class="tab-ie">
+			<p class="unit-tip">
+				选择产品最终适用的终端
+			</p>
+			<div class="nuyt">
+				<div class="nitm ad">
+					<div class="ico"></div>
+					<div class="txt">安卓APP</div>
+					<div class="bock"></div>
+				</div>
+				<div class="nitm ios">
+					<div class="ico"></div>
+					<div class="txt">IOS APP</div>
+					<div class="bock"></div>
+				</div>
+				<div class="nitm web selected">
+					<div class="ico"></div>
+					<div class="txt">PC 网页</div>
+					<div class="bock"></div>
+				</div>
+				<div class="nitm h5">
+					<div class="ico"></div>
+					<div class="txt">手机网页/微网页</div>
+					<div class="bock"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		</div>
+		<div id="tab04" class="tab-ie">
+			<p style="font-size: 24px; color:#aaa;text-shadow: 0 1px 0 rgba(255,255,255,.9);text-align:center;padding:100px 30px;">智能定价即将与您见面<br/>敬请期待</p>
+		</div>
+		<div class="fixthebottom"></div>
+		<!--
+        	作者：vincedotnet@hotmail.com
+        	时间：2015-06-22
+        	描述：内容部分（结束）
+        -->
+
+	</body>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script src="js/global.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.radio-bx button').tap(function(){
+				$(this).toggleClass('selected');
+			});
+			
+			$('.tatab .itm').tap(function() {
+				var cls = "selected";
+				var $this = $(this);
+				if($this.hasClass(cls)) {
+					return;
+				}
+				$this.siblings('.itm').removeClass(cls);
+				$this.addClass(cls);
+				var targ = $this.attr('rel');
+				$('.tab-ie.' + cls).removeClass(cls);
+				$("#" + targ).addClass(cls);
+			});
+			$('.bwitm').tap(function() {
+				var $this = $(this);
+				$this.siblings('.bwitm.selected').removeClass('selected');
+				$this.addClass('selected');
+			});
+			
+			$('.nuyt .nitm').tap(function(){
+				var $this = $(this);
+				$this.toggleClass('selected');
+			});
+		});
+	</script>
+
+</html>
