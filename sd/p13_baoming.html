@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>填写报名资料</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="css/font-awesome.css" />
+		<link href="css/global.css" rel="stylesheet" />
+	</head>
+	<body ontouchstart="">
+		<span class="p14-t01 tc">
+			报名学校： 深大驾校
+		</span>
+		
+		<div class="blackrowgall">
+			<div class="row">
+				<span class="tt">姓名</span>
+				<input placeholder="请填写真实姓名" type="text" class="holder" />
+			</div>
+			<div class="row actbtn cd-slideoutbtn" rel="#pp-change-tel">	<span class="tt">手机</span>
+				<div class="holder arr">
+					<span>点击设置</span>
+					<i class="icoin fa fa-angle-right"></i>
+				</div>
+			</div>
+			<div class="row actbtn">
+				<span class="tt">性别</span>
+				<div class="holder">
+					<span>
+						<input type="radio" id="p14-male" name="gener"/><label for="p14-male">男</label>
+						&nbsp;&nbsp;
+						<input type="radio" id="p14-female" name="gener"/><label for="p14-female">女</label>
+					</span>
+				</div>
+			</div>
+			<div class="row">
+				<span class="tt">出生日期</span>
+				<input placeholder="请填写出生日期" value="1990-01-01" type="date" class="holder" />
+			</div>
+			<div class="row">
+				<span class="tt">身份证号码</span>
+				<input placeholder="填写正确身份证号码" value="" type="text" class="holder" />
+			</div>
+			<div class="row">
+				<span class="tt">籍贯</span>
+				<input placeholder="请填写籍贯" value="" type="text" class="holder" />
+			</div>
+			<div class="row">
+				<span class="tt">驾照类型</span>
+				
+				<div class="holder">
+				<select class="">
+					<option>C1手动挡</option>
+					<option>C2自动档</option>
+				</select>
+				</div>
+			</div>
+		</div>
+			<div class="blackrowgall">
+			<div class="row">
+				<span class="tt">邮箱</span>
+				<input placeholder="请填写常用邮箱" value="" type="text" class="holder" />
+			</div>
+			<div class="row">
+				<span class="tt">QQ（可选）</span>
+				<input placeholder="请填写QQ" value="" type="text" class="holder" />
+			</div>
+		</div>
+		
+		
+		<div class="clear-15"></div>
+		<a class="fullbtn" href="p14_apply-success.html">确认提交</a>
+		<div class="bt-distance"></div>
+		
+		<div class="slidepopup cd-slidepopup" id="pp-change-tel">
+			<div class="tt">更改电话号码<span class="back cd-slidepopupback"><i class="ico fa fa-angle-left"></i></span></div>
+			<div class="blackrowgall">
+				<div class="row">
+					<input placeholder="请填写手机号码" type="tel" maxlength="11" value="18923833647" class="fulltxtinput">
+					<button class="sendvalcodbt">发送验证码</button>
+				</div>
+				<div class="row">
+					<input placeholder="验证码" type="tel" maxlength="11" class="fulltxtinput">
+				</div>
+			</div>
+			<div class="clear-15"></div>
+			<div class="fullbtn">
+				确认
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/jquery-mobile.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+		<script type="text/javascript" src="js/swipe.js"></script>
+		<script>
+			$('document').ready(function() {
+				
+			});
+		</script>
+	</body>
+
+</html>

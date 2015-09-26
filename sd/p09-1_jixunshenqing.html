@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>考前集训报名</title>
+
+		<!-- Bootstrap -->
+		<link href="css/global.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/font-awesome.css" />
+	</head>
+
+	<body ontouchstart="">
+		<div class="p0901-p3">
+			<div class="p0901-p5">
+				科目二 考前集训报名
+			</div>
+			<div class="p0901-p2">1. 请选择考场</div>
+			<div class="p0901-p4">
+				<div class="wtradio">
+					<input type="radio" value="1" id="rad01" name="clients" />
+					<label for="rad01"></label>
+				</div>
+				<label class="wtcheckboxlabel p0901-p1" for="rad01">东森考场</label>
+				
+				<div class="wtradio">
+					<input type="radio" value="1" id="rad02" name="clients" />
+					<label for="rad02"></label>
+				</div>
+				<label class="wtcheckboxlabel p0901-p1" for="rad02">广仁考场</label>
+			</div>
+			
+			
+			<div class="p0901-p2">2. 选择集训日期</div>
+			<div class="p0901-p4">
+				<!-- date控件，若要显示默认值，得把日期格式写正确到value属性中（“0”都要补上！） -->
+				<input type="date" id="thedate" value="2011-01-04" class="p10-dpxi1"/>
+				<div class="p10-dpxi2">* 请提前考试日期一天参加集训</div>
+			</div>
+		</div>
+		
+		<div class="clear-15"></div>
+		<a href="p09-2_jixunshenqingsuccess.html" class="fullbtn">提交报名申请</a>
+
+		<div class="bt-distance"></div>
+
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/jquery-mobile.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+		<script type="text/javascript" src="js/swipe.js"></script>
+		<script>
+			$('document').ready(function() {
+				$('#thedate').val(new Date());
+			});
+		</script>
+	</body>
+
+</html>

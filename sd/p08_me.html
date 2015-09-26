@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>我</title>
+
+		<!-- Bootstrap -->
+		<link href="css/global.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/font-awesome.css" />
+	</head>
+
+	<body ontouchstart="">
+		<!--底部menu-->
+		<div class="menu-fix">
+			<div class="menu-fix-itm home cd_hottap" hottap="p02_shouye.html"><i class="ico"></i></div>
+			<div class="menu-fix-itm jxs cd_hottap" hottap="p04_guangchang.html"><i class="ico"></i></div>
+			<div class="menu-fix-itm me cd_hottap selected" hottap="p10_me.html"><i class="ico"></i></div>
+		</div>
+		
+		<div class="p10-head-warning" id="didntsettel">
+			您还没有填写基本信息，前往设置
+		</div>
+		<div class="p10-t02">
+			<i class="fa fa-camera"></i>
+			<img src="img/user04.jpg" class="usrgmi" />
+			<div class="p10-t03">Jeans chan</div>
+		</div>
+
+		<div class="blackrowgall unclickable nmt">
+			<div class="row actbtn">
+				<span class="tt">账户余额</span>
+				<div class="holder">
+					<span>299元</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="blackrowgall">
+			<div class="row actbtn cd-slideoutbtn" rel="#pp-change-name">
+				<span class="tt">真实姓名</span>
+				<div class="holder arr">
+					<span>张三丰</span>
+					<i class="icoin fa fa-angle-right"></i>
+				</div>
+			</div>
+			<div class="row actbtn cd-slideoutbtn" id="pp-change-tel-btn" rel="#pp-change-tel">
+				<span class="tt">手机</span>
+				<div class="holder arr">
+					<span>18923833647</span>
+					<i class="icoin fa fa-angle-right"></i>
+				</div>
+			</div>
+			<div class="row actbtn cd-slideoutbtn" rel="#pp-change-id">
+				<span class="tt">身份证号</span>
+				<div class="holder arr">
+					<span>&nbsp;</span>
+					<i class="icoin fa fa-angle-right"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="blackrowgall">
+			<div class="row actbtn cd_hottap height" hottap="p17_order.html">
+				<span class="tt">我的订单</span>
+				<div class="holder arr">
+					<i class="icoin fa fa-angle-right"></i>
+				</div>
+			</div>
+			<div class="row actbtn cd_hottap height" hottap="p18_jilu.html">
+				<span class="tt">我的学车记录</span>
+				<div class="holder arr">
+					<i class="icoin fa fa-angle-right"></i>
+				</div>
+			</div>
+			<div class="row actbtn height">
+				<span class="tt">优惠券</span>
+				<div class="holder arr">
+					<i class="icoin fa fa-angle-right"></i>
+				</div>
+			</div>
+			<div class="row actbtn cd_hottap height" hottap="p15_message.html">
+				<span class="tt">我的消息</span>
+				<div class="holder arr">
+					<i class="icoin fa fa-angle-right"></i>
+				</div>
+			</div>
+		</div>
+		
+		<div class="blackrowgall unclickable">
+			<div class="row height">
+				<span class="tt blue">当前学车进度</span>
+				<a href="p09_jindu.html" class="kejindu-all">查看全部进度</a>
+			</div>
+			<div class="row">
+				<div class="p10-cnitb">
+					<div class="tr">
+						<div class="td">报名驾校：</div>
+						<div class="td"><a href="#" style="text-decoration: underline;color:#3987D5;">深大驾校</a></div>
+					</div>
+				</div>
+				
+				<div class="kejindu-dabk doing">
+					<div class="kejindu-tt">科目二 <i class="fa fa-play-circle mwoi-label">学习中</i></div>
+					<div class="kejindu-bieio">
+						<div class="kejindu-tb">
+							<div class="kejindu-td col1">1. 倒车入库</div>
+							<div class="kejindu-td col2">
+								<div>
+									<i class="fa fa-check-square"></i> <i class="fa fa-check-square"></i> <i class="fa fa-check-square"></i> <i class="fa fa-check-square"></i>
+								</div>
+								<div>
+									已完成4次训练
+								</div>
+							</div>
+						</div>
+						<div class="kejindu-tb">
+							<div class="kejindu-td col1">2. 出库，入库</div>
+							<div class="kejindu-td col2">
+								<div>
+									<i class="fa fa-check-square"></i> <i class="fa fa-check-square"></i> <i class="fa fa-check-square"></i> <i class="fa fa-check-square"></i> <i class="fa fa-check-square"></i>
+								</div>
+								<div>
+									已完成5次训练
+								</div>
+							</div>
+						</div>
+						<div class="kejindu-tb">
+							<div class="kejindu-td col1">3. 上坡起步</div>
+							<div class="kejindu-td col2">
+								<div>
+									暂未训练
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div>
+						<!--
+                        	作者：
+                        	时间：2015-09-19
+                        	描述：下方3个按钮，代表了考前集训的不同阶段，后面2个span只是状态显示，无法点击<br />
+                        	理论上同一时刻只能出现一个，请酌情切换显示。
+                        -->
+						<a href="p09-1_jixunshenqing.html" class="fullbtn jixun">考前集训报名</a>
+						<span class="fullbtn jixun waiting">报名已提交，正在分配教练</span>
+						<span class="fullbtn jixun bookinged">已预约，日期：2015.12.15</span>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<!--
+        	作者：
+        	时间：2015-09-19
+        	描述：此处“报名驾校”按钮和前面的“当前进度”以及下方的“约教练”部分互斥，
+        	只有没有报名的用户才出现此按钮，且不出现“当前进度部分”和“约教练”
+        	反之则互斥展示
+        -->
+		<div class="clear-15"></div>
+		<a href="p13_baoming.html" class="fullbtn">报名驾校</a>
+		<div class="clear-15"></div>
+		<a href="p10_yuejiao.html" class="fullbtn">约教练</a>
+		
+		<div class="clear-15"></div>
+		<a href="p19_tousu.html" class="fullbtn normal">投诉和建议</a>
+		
+		<div class="bt-distance"></div>
+
+		<div class="slidepopup cd-slidepopup" id="pp-change-name">
+			<div class="tt">更改真实姓名<span class="back cd-slidepopupback"><i class="ico fa fa-angle-left"></i></span></div>
+			<div class="blackrowgall">
+				<div class="row">
+					<input placeholder="请填写" type="text" maxlength="11" value="张三丰" class="fulltxtinput" />
+				</div>
+			</div>
+			<div class="clear-15"></div>
+			<div class="fullbtn">
+				确认
+			</div>
+		</div>
+
+		<div class="slidepopup cd-slidepopup" id="pp-change-tel">
+			<div class="tt">更改电话号码<span class="back cd-slidepopupback"><i class="ico fa fa-angle-left"></i></span></div>
+			<div class="blackrowgall">
+				<div class="row">
+					<input placeholder="请填写手机号码" type="tel" maxlength="11" value="18923833647" class="fulltxtinput" />
+					<button class="sendvalcodbt">发送验证码</button>
+				</div>
+				<div class="row">
+					<input placeholder="验证码" type="tel" maxlength="11" class="fulltxtinput" />
+				</div>
+			</div>
+			<div class="clear-15"></div>
+			<div class="fullbtn">
+				确认
+			</div>
+		</div>
+
+		<div class="slidepopup cd-slidepopup" id="pp-change-id">
+			<div class="tt">更改身份证号码<span class="back cd-slidepopupback"><i class="ico fa fa-angle-left"></i></span></div>
+			<div class="blackrowgall">
+				<div class="row">
+					<input placeholder="请填写身份证号码" type="text" value="420122129384646388" class="fulltxtinput" />
+				</div>
+			</div>
+			<div class="clear-15"></div>
+			<div class="fullbtn">
+				确认
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/jquery-mobile.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+		<script type="text/javascript" src="js/swipe.js"></script>
+		<script>
+			$('document').ready(function() {
+				$('#didntsettel').tap(function(){
+					$('#pp-change-tel-btn').tap();
+				});
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>我的订单</title>
+
+		<!-- Bootstrap -->
+		<link href="css/global.css" rel="stylesheet">
+	</head>
+
+	<body ontouchstart="">
+		<!-- case 2: completed付款完成状态时（START） -->
+		<div class="status-for-order completed">
+			已支付
+		</div>
+		<!-- case 2: completed付款完成状态时（END） -->
+
+		<!-- case 1: pending等待支付状态时（START） -->
+		<!-- 该按钮点击了也是跳转至付款页面 -->
+		<div class="status-for-order pending">
+			待付款，现在支付
+		</div>
+		<!-- case 1: pending等待支付状态时（END） -->
+
+		<!-- case 3: refunding等待退款状态时（START） -->
+		<!-- 该按钮点击了也是跳转至付款页面 -->
+		<div class="status-for-order refunding">
+			退款申请中
+		</div>
+		<!-- case 3: refunding等待退款状态时（END） -->
+
+		<!-- case 4: refunded等待退款状态时（START） -->
+		<!-- 该按钮点击了也是跳转至付款页面 -->
+		<div class="status-for-order refunded">
+			已退款
+		</div>
+		<!-- case 4: refunding等待退款状态时（END） -->
+
+
+		<div class="ccnox">场次1：</div>
+		<div class="blackrowgall">
+			<div class="row">
+				<span class="tt">教练</span>
+				<span class="holder">张三丰<span class="lightgray">（5.0分）</span><img src="img/user04.jpg" width="25" /></span>
+			</div>
+			<div class="row">
+				<span class="tt">手机</span>
+				<div class="holder">
+					<span>18873657485</span>
+				</div>
+			</div>
+			<div class="row">
+				<span class="tt">时间</span>
+				<div class="holder">
+					<span>8月14日 15:00 - 16:00</span>
+				</div>
+			</div>
+			<div class="row">
+				<span class="tt">驾校地址</span>
+				<div class="holder">
+					<span class="font12px">深南中路1002号，深大驾校</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 为什么会有场次？ 因为用户理论上来讲在一个订单里面会出现多个场次，即在分配教练的时候会是不同教练 -->
+		
+		<div class="ccnox">场次2：</div>
+		<div class="blackrowgall">
+			<div class="row">
+				<span class="tt">教练</span>
+				<span class="holder">李白<span class="lightgray">（4.8分）</span><img src="img/user04.jpg" width="25" /></span>
+			</div>
+			<div class="row">
+				<span class="tt">手机</span>
+				<div class="holder">
+					<span>18873657485</span>
+				</div>
+			</div>
+			<div class="row">
+				<span class="tt">时间</span>
+				<div class="holder">
+					<span>8月14日 18:00 - 19:00</span>
+				</div>
+			</div>
+			<div class="row">
+				<span class="tt">驾校地址</span>
+				<div class="holder">
+					<span class="font12px">深南中路1002号，深大驾校</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="blackrowgall">
+			<div class="row">
+				<span class="tt">总价</span>
+				<span class="holder">￥1559</span>
+			</div>
+		</div>
+
+		<!-- case 1: pending等待支付状态时（START） -->
+		<div class="clear-15"></div>
+		<div class="fullbtn">继续支付</div>
+		<!-- case 1: pending等待支付状态时（END） -->
+
+		<div class="clear-15"></div>
+		<div class="fullbtn normal cd_hottap" hottap="p17_order.html">返回</div>
+
+		<!-- case 3: 当已经支付以后，用户可以发起退款申请（START） -->
+		<div class="clear-15"></div>
+		<a href="p17-3_ordercancelsuccess.html" class="fullbtn normal" style="background:#FBFBFB;color:#aaa;">申请退款</a>
+		<!-- case 3: 当已经支付以后，用户可以发起退款申请（END） -->
+
+		<!-- case 1: 删除订单状态时（START） -->
+		<div class="clear-15"></div>
+		<div class="fullbtn dangerbtn">删除该订单</div>
+		<!-- case 1: 删除订单状态时（END） -->
+
+		<div class="bt-distance"></div>
+
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/jquery-mobile.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+		<script type="text/javascript" src="js/swipe.js"></script>
+		<script>
+			$('document').ready(function() {});
+		</script>
+	</body>
+
+</html>

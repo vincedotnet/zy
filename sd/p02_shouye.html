@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>驾校广场</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link href="css/global.css" rel="stylesheet">
+	</head>
+	<script type="text/javascript">
+		// 此处是php代码渲染输出而成，一次性把该导师所有的图片路径都加载至此。
+		var imgs_json = [{
+			url: 'img/photocase/tpp01.jpg'
+		}, {
+			url: 'img/photocase/tpp02.jpg'
+		}, {
+			url: 'img/photocase/tpp03.jpg'
+		}];
+	</script>
+	
+	
+	<body ontouchstart="">
+		<!-- $.waiting()（START） -->
+		<div class="rotatedivwrapper">
+			<div class="rotatediv"></div>
+			<div class="msg"></div>
+		</div>
+		<!-- $.waiting()（END） -->
+		<!--此段为滑动多图的html部分，写死在这里-->
+		<div id="cd_mentor_img_slider" class="swipe">
+			<div class="swipe-wrap">
+				<!--<div class="figure"></div>-->
+			</div>
+			<!-- 放置索引标签的地方 -->
+			<div class="gl">
+				<!--<div class="pgitm"></div>-->
+			</div>
+		</div>
+		
+		<!--底部menu-->
+		<div class="menu-fix">
+			<div class="menu-fix-itm home cd_hottap selected" hottap="p02_shouye.html"><i class="ico"></i></div>
+			<div class="menu-fix-itm jxs cd_hottap" hottap="p04_guangchang.html"><i class="ico"></i></div>
+			<div class="menu-fix-itm me cd_hottap" hottap="p08_me.html"><i class="ico"></i></div>
+		</div>
+		
+		
+		<div class="bbttiu">
+			<div class="wp">
+				<div class="ltxline"></div>
+				<div class="rtxline"></div>
+				<div>五星驾校</div>
+				<div class="ssbnt">口碑、快捷、省时、省钱</div>
+				<a href="#" class="ssbnal">查看更多</a>
+			</div>
+			
+		</div>
+		
+
+		<div class="tcfilter-container">
+			<div class="zhscitm cd_hottap" hottap="p05_jiaxiao.html">
+				<div class="tp"></div>
+				<div class="btp">
+					<div class="tt">
+						<span>深大驾校</span>
+						<span class="mostars-c">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+						</span>
+					</div>
+					<div class="area">
+						<span class="itm"><i class="fa fa-trophy"></i>&nbsp;&nbsp;C1照, C2照</span>
+						<span class="itm dist"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;南山 1.5KM</span>
+					</div>
+					<div class="stt">二十年传奇品牌，服务深大学子， 校庆期间报名学员一律88折</div>
+				</div>
+			</div>
+			<div class="zhscitm cd_hottap" hottap="p05_jiaxiao.html">
+				<div class="tp" style="background-image: url(img/photocase/np02.jpg);"></div>
+				<div class="btp">
+					<div class="tt">
+						<span>科大驾校</span>
+						<span class="mostars-c">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+							<i class="fa fa-star-o"></i>
+						</span>
+					</div>
+					<div class="area">
+						<span class="itm"><i class="fa fa-trophy"></i>&nbsp;&nbsp;C1照, C2照</span>
+						<span class="itm dist"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;南山 1.5KM</span>
+					</div>
+					<div class="stt">二十年传奇品牌，服务深大学子， 校庆期间报名学员一律88折</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		
+		<div class="bt-distance"></div>
+		<!--<div class="list-end-loadmore">
+			<span>正在加载更多，请稍候 ...</span>
+		</div>-->
+
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/jquery-mobile.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+		
+		<script type="text/javascript" src="js/swipe.js"></script>
+		<script>
+			$('document').ready(function() {
+				if (imgs_json.length) {
+					// 根据imgs_json的长度和内容循环加载图片
+					$.each(imgs_json, function() {
+						var new_img = $('<div>').addClass('figure');
+						new_img.css('background-image', 'url(' + this.url + ')');
+						$('#cd_mentor_img_slider .swipe-wrap').append(new_img);
+					});
+					// 初始化swipe
+					var slider = Swipe(document.getElementById('cd_mentor_img_slider'), {
+						startSlide: 0,
+						speed: 400,
+						auto: false,
+						continuous: false,
+						disableScroll: false,
+						stopPropagation: false,
+						callback: function(index, elem) {},
+						transitionEnd: function(index, elem) {
+							$('.gl .pgitm.selected').removeClass('selected');
+							$('.gl .pgitm[index="' + index + '"]').addClass('selected');
+						}
+					});
+					// 初始化pager
+					var n = slider.getNumSlides();
+					for (var i = 0; i < n; i++) {
+						var new_pager = $('<div>').addClass('pgitm').attr('index', i);
+						if(i === 0) {
+							new_pager.addClass('selected');
+						}
+						$('.swipe .gl').append(new_pager);
+					}
+				}
+			});
+		</script>
+	</body>
+
+</html>

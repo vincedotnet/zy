@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>深大驾校</title>
+
+		<!-- Bootstrap -->
+		<link href="css/global.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.css">
+	</head>
+
+	<script type="text/javascript">
+		 // 此处是php代码渲染输出而成，一次性把该导师所有的图片路径都加载至此。
+		var imgs_json = [{
+			url: 'img/photocase/np01.jpg'
+		}, {
+			url: 'img/photocase/np02.jpg'
+		}, {
+			url: 'img/photocase/tpp03.jpg'
+		}];
+	</script>
+
+	<body ontouchstart="">
+		<!--<div style="background:#FFF;z-index:99;top:0;left:0;width:100%;height:32px;line-height:32px;text-align:center;position: fixed;" id="xxeee">
+		</div>-->
+		<!-- $.waiting()（START） -->
+		<div class="rotatedivwrapper">
+			<div class="rotatediv"></div>
+			<div class="msg"></div>
+		</div>
+		<!-- $.waiting()（END） -->
+
+		<!--此段为滑动多图的html部分，写死在这里-->
+		<div>
+			<!--此处切换红心的样式，前后端一起实现-->
+			<i class="fa fa-heart-o ltheart"></i>
+			<div id="cd_mentor_img_slider" class="swipe">
+				<div class="swipe-wrap">
+					<!--<div class="figure"></div>-->
+				</div>
+				<!-- 放置索引标签的地方 -->
+				<div class="gl">
+					<!--<div class="pgitm"></div>-->
+				</div>
+			</div>
+		</div>
+
+		<div class="mentor-intro-blk">
+			<img src="img/photocase/sdjx-logo.png" class="usrimg" />
+			<div class="user-tt">
+				<!--有认证就有 has_cert这个class-->
+				<!--未认证就没有 has_cert这个class， 并且没有下方class="cert"的span-->
+				<div class="nm has_cert">
+					深大驾校
+					<span class="cert">五星驾校</span>
+				</div>
+				<div>
+					<span class="mostars-c" style="float:none;">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+						<i>（4.8）</i>
+					</span>
+				</div>
+			</div>
+			<div class="user3-desc">
+				<div>
+					<div class="user3-desc-itm">驾照类型：<span class="dt">C1手动, C2自动</span></div>
+					<div class="user3-desc-itm">授课区域：<span class="dt">南山，深大</span></div>
+					<div class="user3-desc-itm">校龄：<span class="dt">21年</span></div>
+				</div>
+			</div>
+
+			<div class="sch-det-blk" id="fix-sch-det-blk">
+				<div class="sch-det-blk-itm selected" rel="cd-blkx1"><i class="fa fa-clone"></i> 驾校详情</div>
+				<div class="sch-det-blk-itm mid" rel="cd-blkx2"><i class="fa fa-calendar-check-o"></i> 报名&amp;费用</div>
+				<div class="sch-det-blk-itm" rel="cd-blkx3"><i class="fa fa-calendar-check-o"></i> 约练</div>
+			</div>
+
+		</div>
+		<div class="dipu1">
+			<div class="cd-bigblk" name="cd-blkx1">
+				<div class="dipu2">
+					<div class="dipu3">驾校简介</div>
+					<div class="dipu4 detailddl">
+						<div>欢迎光临深圳深大驾校，深大驾校电话：0755-26537473， 深圳深大驾校怎么样，价格贵不贵？深大驾校好不好？ 深大驾校地址：深圳市南山区南海大道3688号大学是一所全国闻名的综合性大学，综合性不仅仅体现在教学体系上，也体现在硬件服务体系上。深圳大学机动车驾驶技术培训部（简称深大驾培）就是这所大学综合性配套设施的体现。深大驾培自一九九六年因汽检专业、中英文秘书专业必修课需要而创建，一直以来以严谨的学风、良好的师资、规范的管理闻名于深圳市驾驶培训行业。 深大驾部业务面对校内师生，拥有二十多台全新捷达教练车；自建有7000㎡的桩训场、9选6训练场。同时拥有一批富有教学经验的教练员，为深圳大学培养了一大批技术过硬的驾驶员。</div>
+					</div>
+				</div>
+				<div class="dipu2 nbb">
+					<div class="dipu3">驾校图片</div>
+					<div style="background:#E4E4E4;padding:10px;margin-bottom:15px;">
+						
+					</div>
+				</div>
+			</div>
+			<div class="nviei cd-bigblk" name="cd-blkx2">
+				<div class="nviei-s1">
+					<span>报名&amp;费用</span>
+					<div class="nviei-s2"></div>
+				</div>
+				<div class="nviei-s3">
+					<div>我驾校一贯严于治学，保证教学质量，把好上路安全观，保证每位学员来到这里能有很好的收获。</div>
+					<div class="nviei-s4">
+						报名价格如下：
+					</div>
+					<div>
+						<span class="paizc selected">C1手动: 3800 <i class="fa fa-check-circle"></i></span>
+						<span class="paizc">C2自动: 4200 <i class="fa fa-check-circle"></i></span>
+					</div>
+					<div>
+						<a href="p13_baoming.html" class="p05-cniwe">立刻报名</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="cd-bigblk" name="cd-blkx3">
+				<div class="dipu3-att">
+					<div class="dipu3">约练（选择时间和场次）</div>
+					<div class="dipu4 time-dfrm">
+						<div class="wp">
+							<!--<div class="cvr"></div>-->
+							<div class="time-day-select">
+								<div class="table">
+									<div class="td selected">8月15日</div>
+									<div class="td">8月16日</div>
+									<div class="td">8月17日</div>
+									<div class="td">8月18日</div>
+								</div>
+							</div>
+						</div>
+						<div class="time-tb">
+							<div class="ttd" val="6">
+								<div class="cowl cowl1">
+									<div>
+										<span>时间：</span><span class="val">6:00 - 7:00</span>
+									</div>
+									<div>
+										<span>价格：</span><span class="val">￥128</span>
+									</div>
+								</div>
+								<div class="cowl cowl2">
+									<div>已预约：<span class="val">21人</span></div>
+									<div>可预约：<span class="val">4人</span></div>
+									<div class="fullbook">已约满</div>
+								</div>
+								<div class="cowl cks">
+									<i class="fa fa-check-circle"></i>
+								</div>
+							</div>
+							<div class="ttd unclickable" val="7">
+								<div class="cowl cowl1">
+									<div>
+										<span>时间：</span><span class="val">7:00 - 8:00</span>
+									</div>
+									<div>
+										<span>价格：</span><span class="val">￥150</span>
+									</div>
+								</div>
+								<div class="cowl cowl2">
+									<div>已预约：<span class="val">21人</span></div>
+									<div>可预约：<span class="val">4人</span></div>
+									<div class="fullbook">已约满</div>
+								</div>
+								<div class="cowl cks">
+									<i class="fa fa-check-circle"></i>
+								</div>
+							</div>
+							<div class="ttd unclickable" val="8">
+								<div class="cowl cowl1">
+									<div>
+										<span>时间：</span><span class="val">8:00 - 9:00</span>
+									</div>
+									<div>
+										<span>价格：</span><span class="val">￥150</span>
+									</div>
+								</div>
+								<div class="cowl cowl2">
+									<div>已预约：<span class="val">21人</span></div>
+									<div>可预约：<span class="val">4人</span></div>
+									<div class="fullbook">已约满</div>
+								</div>
+								<div class="cowl cks">
+									<i class="fa fa-check-circle"></i>
+								</div>
+							</div>
+							<div class="ttd" val="9">
+								<div class="cowl cowl1">
+									<div>
+										<span>时间：</span><span class="val">9:00 - 10:00</span>
+									</div>
+									<div>
+										<span>价格：</span><span class="val">￥150</span>
+									</div>
+								</div>
+								<div class="cowl cowl2">
+									<div>已预约：<span class="val">21人</span></div>
+									<div>可预约：<span class="val">4人</span></div>
+									<div class="fullbook">已约满</div>
+								</div>
+								<div class="cowl cks">
+									<i class="fa fa-check-circle"></i>
+								</div>
+							</div>
+							<div class="ttd" val="10">
+								<div class="cowl cowl1">
+									<div>
+										<span>时间：</span><span class="val">10:00 - 11:00</span>
+									</div>
+									<div>
+										<span>价格：</span><span class="val">￥120</span>
+									</div>
+								</div>
+								<div class="cowl cowl2">
+									<div>已预约：<span class="val">13人</span></div>
+									<div>可预约：<span class="val">6人</span></div>
+									<div class="fullbook">已约满</div>
+								</div>
+								<div class="cowl cks">
+									<i class="fa fa-check-circle"></i>
+								</div>
+							</div>
+							<div class="ttd selected" val="11">
+								<div class="cowl cowl1">
+									<div>
+										<span>时间：</span><span class="val">11:00 - 12:00</span>
+									</div>
+									<div>
+										<span>价格：</span><span class="val">￥190</span>
+									</div>
+								</div>
+								<div class="cowl cowl2">
+									<div>已预约：<span class="val">16人</span></div>
+									<div>可预约：<span class="val">5人</span></div>
+									<div class="fullbook">已约满</div>
+								</div>
+								<div class="cowl cks">
+									<i class="fa fa-check-circle"></i>
+								</div>
+							</div>
+							<div class="ttd selected" val="12">
+								<div class="cowl cowl1">
+									<div>
+										<span>时间：</span><span class="val">13:00 - 14:00</span>
+									</div>
+									<div>
+										<span>价格：</span><span class="val">￥160</span>
+									</div>
+								</div>
+								<div class="cowl cowl2">
+									<div>已预约：<span class="val">26人</span></div>
+									<div>可预约：<span class="val">6人</span></div>
+									<div class="fullbook">已约满</div>
+								</div>
+								<div class="cowl cks">
+									<i class="fa fa-check-circle"></i>
+								</div>
+							</div>
+	
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="jbxc-tip">
+				若希望<strong>结伴学车</strong>，可以每人购买一小时然后一起去训练场找教练说明情况。
+			</div>
+			
+		</div>
+		<a href="p10-1_zhifuqueren.html" class="btidiom">
+			<i class="fa fa-weixin"></i> 支付350元 <span class="sce">（8月15日 19:00-20:00, 21:00-22:00）</span>
+		</a>
+		<!--
+        	作者：vincedotnet@hotmail.com
+        	时间：2015-09-17
+        	描述：这部分是用于悬浮在头顶的另一个副本
+        -->
+		<div class="sch-det-blk" id="top-sch-det-blk">
+			<div class="sch-det-blk-itm selected" rel="cd-blkx1"><i class="fa fa-clone"></i> 驾校详情</div>
+			<div class="sch-det-blk-itm mid" rel="cd-blkx2"><i class="fa fa-calendar-check-o"></i> 报名&amp;费用</div>
+			<div class="sch-det-blk-itm" rel="cd-blkx3"><i class="fa fa-calendar-check-o"></i> 约练</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/jquery-mobile.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+		<script type="text/javascript" src="js/swipe.js"></script>
+		<script>
+			$('document').ready(function(e) {
+				if (imgs_json.length) {
+					// 根据imgs_json的长度和内容循环加载图片
+					$.each(imgs_json, function() {
+						var new_img = $('<div>').addClass('figure');
+						new_img.css('background-image', 'url(' + this.url + ')');
+						$('#cd_mentor_img_slider .swipe-wrap').append(new_img);
+					});
+					// 初始化swipe
+					var slider = Swipe(document.getElementById('cd_mentor_img_slider'), {
+						startSlide: 0,
+						speed: 400,
+						auto: false,
+						continuous: false,
+						disableScroll: false,
+						stopPropagation: false,
+						callback: function(index, elem) {},
+						transitionEnd: function(index, elem) {
+							$('.gl .pgitm.selected').removeClass('selected');
+							$('.gl .pgitm[index="' + index + '"]').addClass('selected');
+						}
+					});
+					// 初始化pager
+					var n = slider.getNumSlides();
+					for (var i = 0; i < n; i++) {
+						var new_pager = $('<div>').addClass('pgitm').attr('index', i);
+						if (i === 0) {
+							new_pager.addClass('selected');
+						}
+						$('.swipe .gl').append(new_pager);
+					}
+				}
+				// 切换头部按钮的悬浮与否
+				var fcs = function() {
+					var ft = $('#fix-sch-det-blk').offset().top;
+					var st = $(window).scrollTop();
+					if (st > ft) {
+						$('#top-sch-det-blk').show();
+						$('#fix-sch-det-blk').css('visibility', 'hidden');
+					} else {
+						$('#top-sch-det-blk').hide();
+						$('#fix-sch-det-blk').css('visibility', 'visible');
+					}
+				};
+				// 测量当前页面滑行的位置并且点亮对应的按钮
+				var scrobt = function() {
+					var st = $(window).scrollTop();
+					//cd-bigblk cd-blkx1
+					var blks = $('.cd-bigblk');
+					for (var i = 0; i < blks.length; i++) {
+						var currentBlk = $(blks.get(i));
+						var fixdis = 5;
+						var t = currentBlk.offset().top - ($('.sch-det-blk-itm').outerHeight() + fixdis);
+						var b = currentBlk.outerHeight() + t - ($('.sch-det-blk-itm').outerHeight() + fixdis);
+						if (st >= t && st <= b) {
+							var name = currentBlk.attr('name');
+							$('.sch-det-blk-itm').removeClass('selected');
+							$('.sch-det-blk-itm[rel=' + name + ']').addClass('selected');
+							break;
+						}
+					}
+				};
+				$(window).on('touchend', function() {
+					fcs();
+					scrobt();
+				});
+				$(window).on('scroll', function() {
+					fcs();
+					scrobt();
+				});
+				$(window).on('touchmove', function() {
+					fcs();
+					scrobt();
+				});
+				$('.sch-det-blk-itm').tapA(function(){
+					var $this = $(this);
+					var name = $this.attr('rel');
+
+					var tar = $('.cd-bigblk[name=' + name + ']');
+					var t = tar.offset().top - $('.sch-det-blk-itm').outerHeight();
+					console.log(t);
+					$('body, html').scrollTop(t);
+				});
+				//				setInterval(function(e) {
+				//					$('#xxeee').text($(window).scrollTop());
+				//				}, 100);
+				//				$(window).on('touchstart', function() {
+				//					$('#xxeee').text('touch start ! 1111');
+				//				});
+				//				$(window).on('touchmove', function(e) {
+				//					$('#xxeee').text('moving ! 2222');
+				//				});
+				//				$(window).on('touchend', function() {
+				//					$('#xxeee').text('ended ! 333');
+				//				});
+				//				$(window).on('scroll', function() {
+				//					$('#xxeee').text('scrolled ! 333');
+				//				});
+				//				$(window).on('scrollstart', function(e){
+				//					console.log(e);
+				//				});
+				//				$(window).on('scrollstop', function(e){
+				//					console.log(e);
+				//				});
+			});
+		</script>
+	</body>
+
+</html>
