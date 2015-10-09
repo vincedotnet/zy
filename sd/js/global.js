@@ -55,6 +55,10 @@ $.endWaiting = function() {
 };
 
 /* LOADING (END) */
+
+
+
+/* TOAST(START) */
 $.toastMsg = function(msg, duration) {
 	if (!duration) {
 		duration = 2000;
@@ -76,6 +80,7 @@ $.toastMsg = function(msg, duration) {
 		}, duration);
 	});
 };
+/* TOAST(END) */
 
 
 
@@ -183,11 +188,117 @@ $.toastMsg = function(msg, duration) {
 
 })(jQuery);
 
-/* TOAST(START) */
 
 
-/* TOAST(END) */
 
+/* 习题模块(START) */
+// 初始化题目框架
+var initTesting = function() {
+	var blockId = 'cd-xiti';
+	var block = $('#' + blockId);
+	if (!block.length) {
+		throw "no div for the testing";
+		return;
+	} else {
+		var html = '<div class="km-kmxuhao" id="cd-kmxuhao"></div>';
+		html += '<div class="km-txtct" id="cd-subjtitle"></div>';
+		html += '<div class="km-imgct" id="cd-imgct"></div>';
+		html += '<input type="hidden" id="cd-subjno" />';
+		html += '<div class="km-datiqu" id="cd-daan"></div>';
+		// cd-mnks-score保存的值为用户在一次答题过程中的得分，在做习题的时候这个值没什么用，在做模拟考试的时候可以视为考卷得分
+		html += '<input type="hidden" class="km-score" id="cd-mnks-score" value="0" />';
+		html = $(html);
+		var nextbtn = $('<button>');
+		nextbtn.addClass('km-nextsubject').attr('id', 'cd-xiayiti').html('下一题');
+		nextbtn.tapA(function() {
+			// 请求下一个题目内容并初始化题目（根据用户上一次退出的答题序号）
+			// ajax 获取数据
+			refreshSubject(testing[getNext()]);
+		});
+		block.append(html).append(nextbtn);
+	}
+
+
+	// 请求第一道题目
+	// ajax 获取数据
+	// 做习题和模拟考试的取数据的方式可能不同，习题做一题取一题，即使退出下一次还是接着来；
+	// 模拟考试每次不能退出，做一题从随机得到的试卷集合中取下一题
+	// 此处做之前前后端要充分沟通
+	var val = testing[getNext()];
+	refreshSubject(val);
+};
+// 刷新一道题目
+var refreshSubject = function(option) {
+	var no = option.no;
+	var content = option.content;
+	$('#cd-kmxuhao').text(no + " / " + option.total);
+	$('#cd-subjno').val(no);
+	// 清空已有的HTML内容
+	$('#cd-subjtitle').empty();
+	$('#cd-imgct').empty();
+	$('#cd-daan').empty();
+	// 初始化HTML内容
+	if (option.title) {
+		$('#cd-subjtitle').html(option.title);
+	}
+	if (option.img) {
+		$('#cd-imgct').append($("<img>").attr('src', option.img));
+	}
+	if (option.answers) {
+		$('#cd-xiayiti').hide();
+		$.each(option.answers, function(i, j) {
+			var html = $("<div>").addClass('itm');
+			if (this.correct) {
+				html.addClass('correct');
+			}
+			html.append($('<span>').addClass('xuanxiang').text(i));
+			html.append($('<span>').addClass('wenzi').text(this.title));
+			var duicuo = $('<i>').addClass('duicuo fa');
+			if (this.correct) {
+				duicuo.addClass('fa-check-circle');
+			} else {
+				duicuo.addClass('fa-times-circle');
+			}
+			html.append(duicuo);
+			html.tapA(function() {
+				if ($(this).siblings('.itm.selected').length > 0) {
+					// 本题若已经点选，则不再做任何操作
+					return;
+				}
+				$(this).addClass('selected').addClass('show');
+				// 正确答案加上show
+				$(this).siblings('.itm.correct').addClass('show');
+				$('#cd-xiayiti').show();
+				// 接下来记住用户最新的答题，答对还是答错并且回传服务器保存
+				var correctornot = false;
+				if ($(this).closest('.km-datiqu').find('.itm.correct.selected').length > 0) {
+					// 答对了
+					correctornot = true;
+					// 保存一下本次答题总得分
+					$('#cd-mnks-score').val(parseInt($('#cd-mnks-score').val()) + 1);
+				}
+				// ajax 发送数据 保存结果
+				// 注意，做习题和做模拟考试的保存方法并不一样
+				// 习题重在保存进度和保存记录错误的题目（多次错误只记录一次）
+				// 而模拟考试则暂时只保存考完的结果（中间的做题对错对于服务器没有实际意义）：
+				// 得分（合格与否），考试日期（考试完成有2个标准：1. 所有试题完成；2. 时间到强制胶卷）；
+
+
+			});
+			$('#cd-daan').append(html);
+		});
+	}
+};
+/* 习题模块(END) */
+
+//根据QueryString参数名称获取值
+function getQueryStringByName(name) {
+	var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
+	if (result == null || result.length < 1) {
+		return "";
+	}
+	return result[1];
+}
 
 /* POPUP (START) */
 $.extend({

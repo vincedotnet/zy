@@ -34,7 +34,7 @@
 		<!-- $.waiting()（END） -->
 
 		<!--此段为滑动多图的html部分，写死在这里-->
-		<div>
+		<div class="jiaxiao-bk">
 			<!--此处切换红心的样式，前后端一起实现-->
 			<i class="fa fa-heart-o ltheart"></i>
 			<div id="cd_mentor_img_slider" class="swipe">
@@ -78,18 +78,19 @@
 
 			<div class="sch-det-blk" id="fix-sch-det-blk">
 				<div class="sch-det-blk-itm selected" rel="cd-blkx1"><i class="fa fa-clone"></i> 驾校详情</div>
-				<div class="sch-det-blk-itm mid" rel="cd-blkx2"><i class="fa fa-calendar-check-o"></i> 报名&amp;费用</div>
+				<div class="sch-det-blk-itm mid" rel="cd-blkx2"><i class="fa fa-lightbulb-o"></i> 报名&amp;费用</div>
 				<div class="sch-det-blk-itm" rel="cd-blkx3"><i class="fa fa-calendar-check-o"></i> 约练</div>
 			</div>
 
 		</div>
-		<div class="dipu1">
-			<div class="cd-bigblk" name="cd-blkx1">
+		<div class="dipu1-d">
+			<div class="cd-bigblk jxbigblk selected" name="cd-blkx1">
 				<div class="dipu2">
 					<div class="dipu3">驾校简介</div>
-					<div class="dipu4 detailddl">
-						<div>欢迎光临深圳深大驾校，深大驾校电话：0755-26537473， 深圳深大驾校怎么样，价格贵不贵？深大驾校好不好？ 深大驾校地址：深圳市南山区南海大道3688号大学是一所全国闻名的综合性大学，综合性不仅仅体现在教学体系上，也体现在硬件服务体系上。深圳大学机动车驾驶技术培训部（简称深大驾培）就是这所大学综合性配套设施的体现。深大驾培自一九九六年因汽检专业、中英文秘书专业必修课需要而创建，一直以来以严谨的学风、良好的师资、规范的管理闻名于深圳市驾驶培训行业。 深大驾部业务面对校内师生，拥有二十多台全新捷达教练车；自建有7000㎡的桩训场、9选6训练场。同时拥有一批富有教学经验的教练员，为深圳大学培养了一大批技术过硬的驾驶员。</div>
+					<div class="detailddlx">
+						<div style="margin-bottom:15px;">欢迎光临深圳深大驾校，深大驾校电话：0755-26537473， 深圳深大驾校怎么样，价格贵不贵？深大驾校好不好？ 深大驾校地址：深圳市南山区南海大道3688号大学是一所全国闻名的综合性大学，综合性不仅仅体现在教学体系上，也体现在硬件服务体系上。深圳大学机动车驾驶技术培训部（简称深大驾培）就是这所大学综合性配套设施的体现。深大驾培自一九九六年因汽检专业、中英文秘书专业必修课需要而创建，一直以来以严谨的学风、良好的师资、规范的管理闻名于深圳市驾驶培训行业。 深大驾部业务面对校内师生，拥有二十多台全新捷达教练车；自建有7000㎡的桩训场、9选6训练场。同时拥有一批富有教学经验的教练员，为深圳大学培养了一大批技术过硬的驾驶员。</div>
 					</div>
+					<div class="detailddlx-open" alt="收起">展开</div>
 				</div>
 				<div class="dipu2 nbb">
 					<div class="dipu3">驾校图片</div>
@@ -101,27 +102,48 @@
 					</div>
 				</div>
 			</div>
-			<div class="nviei cd-bigblk" name="cd-blkx2">
-				<div class="nviei-s1">
-					<span>报名&amp;费用</span>
-					<div class="nviei-s2"></div>
-				</div>
-				<div class="nviei-s3">
-					<div>我驾校一贯严于治学，保证教学质量，把好上路安全观，保证每位学员来到这里能有很好的收获。</div>
-					<div class="nviei-s4">
+			<div class="cd-bigblk jxbigblk" name="cd-blkx2">
+				<div class="dipu2">
+					<div class="dipu3">报名须知</div>
+					<div class="nviei-s3">
+						<div>我驾校一贯严于治学，保证教学质量，把好上路安全观，保证每位学员来到这里能有很好的收获。</div>
+					</div>
+
+					<div class="dipu3">
 						报名价格如下：
 					</div>
-					<div>
+					<!--<div style="padding-top:4px;">
 						<span class="paizc selected">C1手动: 3800 <i class="fa fa-check-circle"></i></span>
 						<span class="paizc">C2自动: 4200 <i class="fa fa-check-circle"></i></span>
 					</div>
-					<div>
-						<a href="p13_baoming.html" class="p05-cniwe">立刻报名</a>
+					<div style="padding-top:15px;">
+						<a href="p13_baoming.html" class="fullbtn">立刻报名</a>
+					</div>-->
+
+					<div class="wtradio">
+						<input type="radio" id="rad01" name="clients" />
+						<label for="rad01"></label>
 					</div>
+					<label class="wtcheckboxlabel p0901-p1" for="rad01">C1手动: 3800</label>
+
+					<div class="wtradio">
+						<input type="radio" id="rad02" name="clients" />
+						<label for="rad02"></label>
+					</div>
+					<label class="wtcheckboxlabel p0901-p1" for="rad02">C2自动: 4200</label>
+
+					<div class="clear"></div>
+
+					<div style="padding-top:15px;">
+						<a href="p13_baoming.html" class="cd-likebaom fullbtn normal">立刻报名</a>
+					</div>
+
+					<div class="clear-15"></div>
 				</div>
+				<div class="clear-30"></div>
 			</div>
-			
-			<div class="cd-bigblk" name="cd-blkx3">
+
+			<div class="jxbigblk cd-bigblk" name="cd-blkx3">
 				<div class="dipu3-att">
 					<div class="dipu3">约练（选择时间和场次）</div>
 					<div class="dipu4 time-dfrm">
@@ -263,16 +285,15 @@
 									<i class="fa fa-check-circle"></i>
 								</div>
 							</div>
-	
+
 						</div>
 					</div>
 				</div>
+				<div class="jbxc-tip">
+					若希望<strong>结伴学车</strong>，可以每人购买一小时然后一起去训练场找教练说明情况。
+				</div>
 			</div>
-			
-			<div class="jbxc-tip">
-				若希望<strong>结伴学车</strong>，可以每人购买一小时然后一起去训练场找教练说明情况。
-			</div>
-			
+
 		</div>
 		<a href="p10-1_zhifuqueren.html" class="btidiom">
 			<i class="fa fa-weixin"></i> 支付350元 <span class="sce">（8月15日 19:00-20:00, 21:00-22:00）</span>
@@ -284,7 +305,7 @@
         -->
 		<div class="sch-det-blk" id="top-sch-det-blk">
 			<div class="sch-det-blk-itm selected" rel="cd-blkx1"><i class="fa fa-clone"></i> 驾校详情</div>
-			<div class="sch-det-blk-itm mid" rel="cd-blkx2"><i class="fa fa-calendar-check-o"></i> 报名&amp;费用</div>
+			<div class="sch-det-blk-itm mid" rel="cd-blkx2"><i class="fa fa-lightbulb-o"></i> 报名&amp;费用</div>
 			<div class="sch-det-blk-itm" rel="cd-blkx3"><i class="fa fa-calendar-check-o"></i> 约练</div>
 		</div>
 
@@ -341,66 +362,47 @@
 						$('#fix-sch-det-blk').css('visibility', 'visible');
 					}
 				};
-				// 测量当前页面滑行的位置并且点亮对应的按钮
-				var scrobt = function() {
-					var st = $(window).scrollTop();
-					//cd-bigblk cd-blkx1
-					var blks = $('.cd-bigblk');
-					for (var i = 0; i < blks.length; i++) {
-						var currentBlk = $(blks.get(i));
-						var fixdis = 5;
-						var t = currentBlk.offset().top - ($('.sch-det-blk-itm').outerHeight() + fixdis);
-						var b = currentBlk.outerHeight() + t - ($('.sch-det-blk-itm').outerHeight() + fixdis);
-						if (st >= t && st <= b) {
-							var name = currentBlk.attr('name');
-							$('.sch-det-blk-itm').removeClass('selected');
-							$('.sch-det-blk-itm[rel=' + name + ']').addClass('selected');
-							break;
-						}
-					}
-				};
 				$(window).on('touchend', function() {
 					fcs();
-					scrobt();
 				});
 				$(window).on('scroll', function() {
 					fcs();
-					scrobt();
 				});
 				$(window).on('touchmove', function() {
 					fcs();
-					scrobt();
 				});
-				$('.sch-det-blk-itm').tapA(function(){
+				$('.sch-det-blk-itm').tapA(function() {
+					
 					var $this = $(this);
 					var name = $this.attr('rel');
-
-					var tar = $('.cd-bigblk[name=' + name + ']');
-					var t = tar.offset().top - $('.sch-det-blk-itm').outerHeight();
-					console.log(t);
-					$('body, html').scrollTop(t);
+					$('.sch-det-blk-itm.selected').removeClass('selected');
+					$('.sch-det-blk-itm[rel="' + name + '"]').addClass('selected');
+					$.each($('.cd-bigblk'), function() {
+						if ($(this).attr('name') != name) {
+							$(this).removeClass('selected');
+						} else {
+							$(this).addClass('selected');
+						}
+					});
+					
+					if ($('.sch-det-blk-itm[rel="cd-blkx3"]').hasClass('selected')) {
+						$('.btidiom').removeClass('down').addClass('up');
+					} else {
+						$('.btidiom').addClass('down').removeClass('up');
+					}
 				});
-				//				setInterval(function(e) {
-				//					$('#xxeee').text($(window).scrollTop());
-				//				}, 100);
-				//				$(window).on('touchstart', function() {
-				//					$('#xxeee').text('touch start ! 1111');
-				//				});
-				//				$(window).on('touchmove', function(e) {
-				//					$('#xxeee').text('moving ! 2222');
-				//				});
-				//				$(window).on('touchend', function() {
-				//					$('#xxeee').text('ended ! 333');
-				//				});
-				//				$(window).on('scroll', function() {
-				//					$('#xxeee').text('scrolled ! 333');
-				//				});
-				//				$(window).on('scrollstart', function(e){
-				//					console.log(e);
-				//				});
-				//				$(window).on('scrollstop', function(e){
-				//					console.log(e);
-				//				});
+				$('.detailddlx-open').tapA(function() {
+					$(this).closest('.cd-bigblk').find('.detailddlx').toggleClass('open');
+					var txt = $(this).text();
+					$(this).text($(this).attr('alt'));
+					$(this).attr('alt', txt);
+				});
+				if ($('.detailddlx').outerHeight() < 170) {
+					$('.detailddlx-open').hide();
+				}
+				$('.wtradio input[type="radio"]').change(function() {
+					$('.cd-likebaom').removeClass('normal');
+				});
 			});
 		</script>
 	</body>
