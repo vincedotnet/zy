@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>训练习题</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link href="css/global.css" rel="stylesheet">
+	</head>
+	<script type="text/javascript">
+	</script>
+
+	<body ontouchstart="">
+		<!-- $.waiting()（START） -->
+		<div class="rotatedivwrapper">
+			<div class="rotatediv"></div>
+			<div class="msg"></div>
+		</div>
+		<!-- $.waiting()（END） -->
+
+		<!--习题插入的div，id最好不要弄错-->
+		<div id="cd-xiti"></div>
+
+		<div class="bt-distance"></div>
+
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/jquery-mobile.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+
+		<script type="text/javascript" src="js/swipe.js"></script>
+		<script>
+			// 临时使用的测试数据(可以删除)， 服务端返回值请按此格式
+			var testing = [{
+				/*题目的序号*/
+				no: 4,
+				/*题目的总数*/
+				total: 1994,
+				/*题目的文字内容*/
+				title: '驾驶这种机动车上路行驶属于什么行为？',
+				/*题目的图片路径（可为空）*/
+				img: 'img/photocase/kemu1.jpg',
+				/*答案选项集合*/
+				answers: {
+					A: {
+						title: '违章行为',
+						correct: false
+					},
+					B: {
+						title: '违规行为',
+						correct: false
+					},
+					C: {
+						title: '违法行为',
+						correct: true
+					},
+					D: {
+						title: '犯罪行为',
+						correct: false
+					}
+				}
+			}, {
+				/*题目的序号*/
+				no: 5,
+				/*题目的总数*/
+				total: 1994,
+				/*题目的文字内容*/
+				title: '正面安全气囊与什么配合才能充分发挥保护作用？',
+				/*题目的图片路径（可为空）*/
+				img: null,
+				/*答案选项集合*/
+				answers: {
+					A: {
+						title: '防抱死制动系统',
+						correct: false
+					},
+					B: {
+						title: '座椅安全带',
+						correct: true
+					},
+					C: {
+						title: '座椅安全头枕',
+						correct: false
+					},
+					D: {
+						title: '安全玻璃',
+						correct: false
+					}
+				}
+			}, {
+				/*题目的序号*/
+				no: 6,
+				/*题目的总数*/
+				total: 1994,
+				/*题目的文字内容*/
+				title: '进入左侧道路超车，无法保证与正常行驶前车的横向安全相距时，应怎样做？',
+				/*题目的图片路径（可为空）*/
+				img: null,
+				/*答案选项集合*/
+				answers: {
+					A: {
+						title: '谨慎超越',
+						correct: false
+					},
+					B: {
+						title: '并行一段时间后再超越',
+						correct: false
+					},
+					C: {
+						title: '加速超越',
+						correct: false
+					},
+					D: {
+						title: '放弃超越',
+						correct: true
+					}
+				}
+			}, {
+				/*题目的序号*/
+				no: 7,
+				/*题目的总数*/
+				total: 1994,
+				/*题目的文字内容*/
+				title: '驾驶车辆通过人行横道线时，应注意礼让行人？',
+				/*题目的图片路径（可为空）*/
+				img: null,
+				/*答案选项集合*/
+				answers: {
+					A: {
+						title: '正确',
+						correct: true
+					},
+					B: {
+						title: '错误',
+						correct: false
+					}
+				}
+			}];
+			
+			 // 一个临时方法(可以删除)，和testing联用，获取下一个数据项用于测试
+			var getNext = function() {
+				var next = 0;
+				if ($('body').data('current_testing') >= 0) {
+					next = $('body').data('current_testing') + 1;
+					if (next >= testing.length) {
+						// 从头循环
+						next = 0;
+					}
+				}
+				$('body').data('current_testing', next);
+				return next;
+			};
+			$('document').ready(function() {
+				// 初始化
+				initTesting();
+			});
+		</script>
+	</body>
+
+</html>
