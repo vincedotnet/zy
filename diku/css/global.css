@@ -90,7 +90,9 @@ body {
 	left:50%;
 	margin-left:-37px;
 }
-
+.diodkohid {
+	display:none;
+}
 .bisstep {
 	width:43px;
 	height:142px;
