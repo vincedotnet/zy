@@ -68,7 +68,19 @@
 						<div class="hoijre t1"></div>
 						<div class="apihw">垂直社群</div>
 						<div class="diodkohid">
-							关于垂直社群的介绍内容关于垂直社群的介绍内容关于垂直社群的介绍内容关于垂直社群的介绍内容关于垂直社群的介绍内容关于垂直社群的介绍内容
+							<div class="vcuweit">互联网金融</div>
+							<div class="vcuweit">企业服务</div>
+							<div class="vcuweit">智能硬件</div>
+							<div class="vcuweit">本地生活</div>
+							<div class="vcuweit">广告营销</div>
+							<div class="vcuweit">医疗健康</div>
+							<div class="vcuweit">电子商务</div>
+							<div class="vcuweit">在线旅游</div>
+							<div class="vcuweit">在线教育</div>
+							<div class="vcuweit">房产服务</div>
+							<div class="vcuweit">汽车交通</div>
+							<div class="vcuweit">文娱体育</div>
+							<div class="vcuweit">SNS社交游戏</div>
 						</div>
 					</li>
 					<li class="hoiclick">
@@ -82,14 +94,14 @@
 						<div class="hoijre t3"></div>
 						<div class="apihw">CXO俱乐部</div>
 						<div class="diodkohid">
-							关于CXO俱乐部的详细介绍，关于CXO俱乐部的详细介绍，关于CXO俱乐部的详细介绍关于CXO俱乐部的详细介绍关于CXO俱乐部的详细介绍，关于CXO俱乐部的详细介绍
+							CXO俱乐部，一个base深圳天使轮以上项目的CXO们的俱乐部，包括ZAKER、LOHO眼镜生活、Coding、Sleepace、小恩爱、嘟嘟巴士、Myoffer、妈妈联盟、趣旅网、兔展、微头条、喂车车、兼职达人、车生活、友好速搭、流米等
 						</div>
 					</li>
 					<li class="hoiclick">
 						<div class="hoijre t4"></div>
 						<div class="apihw">创业服务</div>
 						<div class="diodkohid">
-							关于创业服务的详细介绍内容，关于创业服务的详细介绍内容，关于创业服务的详细介绍内容，关于创业服务的详细介绍内容。
+							各种一站式创业服务，高颜值办公空间、工商财会、VI设计，投融资对接，无鸡汤沙龙，垂直社群等
 						</div>
 					</li>
 				</ul>
@@ -97,7 +109,19 @@
 					<div class="hieiwl">垂直社群</div>
 					<div>
 						<div class="mkeoeir">
-							关于垂直社群的介绍内容
+							<div class="vcuweit">互联网金融</div>
+							<div class="vcuweit">企业服务</div>
+							<div class="vcuweit">智能硬件</div>
+							<div class="vcuweit">本地生活</div>
+							<div class="vcuweit">广告营销</div>
+							<div class="vcuweit">医疗健康</div>
+							<div class="vcuweit">电子商务</div>
+							<div class="vcuweit">在线旅游</div>
+							<div class="vcuweit">在线教育</div>
+							<div class="vcuweit">房产服务</div>
+							<div class="vcuweit">汽车交通</div>
+							<div class="vcuweit">文娱体育</div>
+							<div class="vcuweit">SNS社交游戏</div>
 						</div>
 					</div>
 
@@ -194,10 +218,10 @@
 				$('.hoiclick').click(function(){
 					$('.hoiclick').removeClass('selected');
 					$(this).addClass('selected');
-					var tt = $(this).find('.apihw').text();
-					var ct = $(this).find('.diodkohid').text();
-					$('.hieiwl').text(tt);
-					$('.mkeoeir').text(ct);
+					var tt = $(this).find('.apihw').html();
+					var ct = $(this).find('.diodkohid').html();
+					$('.hieiwl').html(tt);
+					$('.mkeoeir').html(ct);
 				});
 				
 				$('.hortabld .itm').click(function(){

@@ -385,3 +385,15 @@ a:hover {
 .qrbtn:hover {
 	background-color: #F8F8F8;
 }
+
+.mkeoeir .vcuweit {
+	display:inline-block;
+	float:left;
+	text-align: center;
+	width:25%;
+}
+.mkeoeir:after {
+	content: ' ';
+	display:block;
+	clear:both;
+}
